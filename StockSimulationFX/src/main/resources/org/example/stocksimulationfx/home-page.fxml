@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="746.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <PasswordField id="Password" layoutX="308.0" layoutY="391.0" prefHeight="24.0" prefWidth="290.0" />
+      <TextField id="Login" layoutX="308.0" layoutY="360.0" prefHeight="24.0" prefWidth="290.0" />
+      <TextField alignment="CENTER" editable="false" layoutX="173.0" layoutY="360.0" prefHeight="24.0" prefWidth="79.0" text="Login" />
+      <TextField alignment="CENTER" editable="false" layoutX="173.0" layoutY="391.0" prefHeight="24.0" prefWidth="79.0" text="Password" />
+      <Button layoutX="169.0" layoutY="432.0" mnemonicParsing="false" text="Connexion" />
+      <Text fontSmoothingType="LCD" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to &lt;Name&gt; : &lt;Slogan Stylé&gt; " textAlignment="CENTER" wrappingWidth="746.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.1533203125">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="353.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text layoutX="144.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter your logins to access your personal dashboard">
+         <font>
+            <Font name="LKLUG" size="15.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="208.0" fitWidth="326.0" layoutX="30.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Images/Stock_Home_Page.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="208.0" fitWidth="326.0" layoutX="386.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Images/Data_Visu_Home_Page.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
