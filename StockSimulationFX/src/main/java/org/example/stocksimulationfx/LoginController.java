@@ -24,22 +24,16 @@ public class LoginController {
     private PasswordField passwordField;
 
     @FXML
-    void handleLogin() throws IOException {
+    void handleLogin(){
         String username = usernameField.getText();
         String password = passwordField.getText();
         if (username.equals("a") && password.equals("p")) {
             Scene prevScene = usernameField.getScene();
             prevScene.getRoot().setOpacity(0.2);
+            Stage loginStage = (Stage) usernameField.getScene().getWindow();
+            LoginSuccess loginSuccess = new LoginSuccess();
+            loginSuccess.display("Login Successful", "Welcome, " + username + "!",loginStage);
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("login-success.fxml"));
-            Parent root = loader.load();
-
-            LoginSuccessController loginSuccessController = loader.getController();
-            loginSuccessController.setUsername("Welcome, " + username + "!");
-
-            Stage successStage = new Stage();
-            successStage.setScene(new Scene(root, 450, 200));
-            successStage.show();
         } else {
             infoLabel.setText("Invalid username or password.");
             infoLabel.setVisible(true);
@@ -49,5 +43,11 @@ public class LoginController {
         }
     }
 
-
+    @FXML
+    void handleQuit(){
+        Stage stage = (Stage) usernameField.getScene().getWindow();
+        boolean answer = ConfirmQuitBox.display("Confirm Quit", "Are you sure you want to quit?");
+        if (answer)
+            stage.close();
+    }
 }
