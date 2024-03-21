@@ -10,3 +10,17 @@
 #### Besoin non fonctionnels
 -> Affichage adapté à la taille de la fenêtre (cf rétrécissement)
 -> Onglet de demande de confirmation de fermeture
+
+### Visualisation Portefeuille
+
+#### Rôle du système :
+1. Visualiser la valeur au jour J du portefeuille
+2. Visualiser l'évolution de la valeur du portefeuille depuis le jour 0
+3. Switcher d'un mode à l'autre (achat vente, visu portefeuille)
+4. Passer au jour suivant
+5. Visualisation de l'historique des transactions
+
+#### Environnement système
+1. Interaction machine du client avec l'interface graphique
+#### Besoin non fonctionnels
+-> Affichage adapté à la taille de la fenêtre (cf rétrécissement)
