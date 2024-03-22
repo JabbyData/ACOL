@@ -6,7 +6,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class DashboardActionController {
+public class DashboardPortfolioController {
     @FXML
     private TextField Date;
 
@@ -30,10 +30,11 @@ public class DashboardActionController {
     }
 
     @FXML
-    void handlePortfolio() throws Exception {
+    void handleAction() throws Exception {
         Stage stage = (Stage) Date.getScene().getWindow();
         stage.close();
-        DashBoardPortfolio dashBoardPortfolio = new DashBoardPortfolio();
-        dashBoardPortfolio.start(new Stage());
+        DashBoardAction dashBoardAction = new DashBoardAction();
+        dashBoardAction.start(new Stage());
     }
+
 }
