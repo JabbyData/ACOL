@@ -11,6 +11,9 @@ public class DashboardPortfolioController {
     private TextField Date;
 
     @FXML
+    private TextField valuePortfolio;
+
+    @FXML
     void handleQuit(){
         Stage stage = (Stage) Date.getScene().getWindow();
         boolean answer = ConfirmQuitBox.display("Confirm Quit", "Are you sure you want to quit?");
@@ -35,6 +38,17 @@ public class DashboardPortfolioController {
         stage.close();
         DashBoardAction dashBoardAction = new DashBoardAction();
         dashBoardAction.start(new Stage());
+    }
+
+    @FXML
+    void nextDay(){
+        // TODO : implement next day + updates
+        System.out.println("Next day");
+    }
+
+    @FXML
+    void displayPortfolio(){
+        // TODO : implement display portfolio
     }
 
 }

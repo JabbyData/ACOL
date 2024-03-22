@@ -8,11 +8,50 @@ import java.io.IOException;
 
 public class DashboardActionController {
     @FXML
-    private TextField Date;
+    private TextField date;
+
+    @FXML
+    private TextField selecDate;
+
+    @FXML
+    void setDate(String date){
+        //TODO : set the date with the good format JJ/MM/AAAA
+        System.out.println("setDate");
+    }
+
+    @FXML
+    void displayCurve(){
+        //TODO : display the curve of the selected stock
+        System.out.println("displayCurve");
+    }
+
+    @FXML
+    void nextDay(){
+        //TODO : go to the next day and update values
+        System.out.println("nextDay");
+    }
+
+    @FXML
+    void buyStock(){
+        //TODO : buy the selected stock
+        System.out.println("buyStock");
+    }
+
+    @FXML
+    void sellStock(){
+        //TODO : sell the selected stock
+        System.out.println("sellStock");
+    }
+
+    @FXML
+    void selecPrice(){
+        //TODO : select the price of the stock
+        System.out.println("selecPrice");
+    }
 
     @FXML
     void handleQuit(){
-        Stage stage = (Stage) Date.getScene().getWindow();
+        Stage stage = (Stage) date.getScene().getWindow();
         boolean answer = ConfirmQuitBox.display("Confirm Quit", "Are you sure you want to quit?");
         if (answer)
             stage.close();
@@ -20,7 +59,7 @@ public class DashboardActionController {
 
     @FXML
     void handleDeconnexion() throws IOException {
-        Stage stage = (Stage) Date.getScene().getWindow();
+        Stage stage = (Stage) date.getScene().getWindow();
         boolean answer = ConfirmQuitBox.display("Confirm Decconexion", "Are you sure you want to deconnect?");
         if (answer) {
             stage.close();
@@ -31,7 +70,7 @@ public class DashboardActionController {
 
     @FXML
     void handlePortfolio() throws Exception {
-        Stage stage = (Stage) Date.getScene().getWindow();
+        Stage stage = (Stage) date.getScene().getWindow();
         stage.close();
         DashBoardPortfolio dashBoardPortfolio = new DashBoardPortfolio();
         dashBoardPortfolio.start(new Stage());

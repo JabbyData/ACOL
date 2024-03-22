@@ -17,10 +17,10 @@
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                            <children>
                               <ComboBox layoutX="4.0" layoutY="100.0" prefHeight="24.0" prefWidth="126.0" />
-                              <TextField fx:id="Date" alignment="CENTER" editable="false" layoutX="12.0" layoutY="54.0" prefHeight="24.0" prefWidth="111.0" text="Date here" />
+                              <TextField fx:id="date" alignment="CENTER" editable="false" layoutX="12.0" layoutY="54.0" prefHeight="24.0" prefWidth="111.0" text="Date here" />
                               <TextField alignment="CENTER" layoutX="12.0" layoutY="14.0" prefHeight="24.0" prefWidth="111.0" text="Mode Action" />
-                              <Button layoutX="11.0" layoutY="171.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="111.0" text="Jour Suivant" />
-                              <Button layoutX="9.0" layoutY="220.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="117.0" onAction="#handlePortfolio" text="Changer Mode" />
+                              <Button layoutX="11.0" layoutY="171.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="111.0" onAction="#nextDay" text="Jour Suivant" />
+                              <Button layoutX="9.0" layoutY="220.0" mnemonicParsing="false" onAction="#handlePortfolio" prefHeight="24.0" prefWidth="117.0" text="Changer Mode" />
                            </children>
                         </AnchorPane>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
@@ -40,23 +40,24 @@
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                            <children>
-                              <Button layoutX="135.0" layoutY="26.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="93.0" text="Acheter" />
-                              <Button layoutX="135.0" layoutY="59.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="93.0" text="Vendre" />
-                              <TextField alignment="CENTER" editable="false" layoutX="20.0" layoutY="26.0" prefHeight="24.0" prefWidth="75.0" text="Quantité" />
+                              <Button layoutX="135.0" layoutY="38.0" mnemonicParsing="false" onAction="#buyStock" prefHeight="24.0" prefWidth="93.0" text="Acheter" />
+                              <Button layoutX="135.0" layoutY="71.0" mnemonicParsing="false" onAction="#sellStock" prefHeight="24.0" prefWidth="93.0" text="Vendre" />
+                              <TextField alignment="CENTER" editable="false" layoutX="29.0" layoutY="38.0" prefHeight="24.0" prefWidth="75.0" text="Quantité" />
                               <SplitPane dividerPositions="0.015384615384615385" layoutX="238.0" layoutY="-6.0" prefHeight="129.0" prefWidth="217.0">
                                 <items>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                                        <children>
-                                          <TextField alignment="CENTER" layoutX="84.0" layoutY="34.0" prefHeight="24.0" prefWidth="111.0" text="JJ/MM/AAAA" />
-                                          <TextField alignment="CENTER" editable="false" layoutX="14.0" layoutY="34.0" prefHeight="24.0" prefWidth="59.0" text="Date " />
-                                          <TextField alignment="CENTER" editable="false" layoutX="14.0" layoutY="64.0" prefHeight="24.0" prefWidth="59.0" text="Prix" />
-                                          <TextField alignment="CENTER" editable="false" layoutX="84.0" layoutY="64.0" prefHeight="24.0" prefWidth="111.0" />
+                                          <TextField fx:id="selecDate" alignment="CENTER" layoutX="9.0" layoutY="40.0" prefHeight="24.0" prefWidth="111.0" text="JJ/MM/AAAA" />
+                                          <TextField alignment="CENTER" editable="false" layoutX="35.0" layoutY="8.0" prefHeight="24.0" prefWidth="59.0" text="Date " />
+                                          <TextField alignment="CENTER" editable="false" layoutX="14.0" layoutY="76.0" prefHeight="24.0" prefWidth="59.0" text="Prix" />
+                                          <TextField alignment="CENTER" editable="false" layoutX="84.0" layoutY="76.0" prefHeight="24.0" prefWidth="111.0" />
+                                          <Button layoutX="140.0" layoutY="40.0" mnemonicParsing="false" onAction="#selecPrice" text="OK" />
                                        </children>
                                     </AnchorPane>
                                 </items>
                               </SplitPane>
-                              <TextField layoutX="11.0" layoutY="59.0" prefHeight="24.0" prefWidth="93.0" />
+                              <TextField layoutX="20.0" layoutY="71.0" prefHeight="24.0" prefWidth="93.0" />
                            </children></AnchorPane>
                     </items>
                   </SplitPane>
