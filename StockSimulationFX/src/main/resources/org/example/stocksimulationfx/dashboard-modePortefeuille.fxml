@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane dividerPositions="0.15577889447236182" layoutX="-8.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="614.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TextField alignment="CENTER" editable="false" layoutX="96.0" layoutY="18.0" text="date here" />
+                  <TextField alignment="CENTER" editable="false" layoutX="21.0" layoutY="18.0" prefHeight="24.0" prefWidth="69.0" text="Date" />
+                  <TextField alignment="CENTER" editable="false" layoutX="351.0" layoutY="18.0" prefHeight="24.0" prefWidth="69.0" text="Valeur" />
+                  <TextField alignment="CENTER" editable="false" layoutX="427.0" layoutY="18.0" text="valeur here" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane dividerPositions="0.47540983606557374" layoutX="6.0" prefHeight="333.0" prefWidth="612.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <SplitPane dividerPositions="0.038461538461538464" layoutY="251.0" orientation="VERTICAL" prefHeight="80.0" prefWidth="287.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <Button layoutX="51.0" layoutY="2.0" mnemonicParsing="false" text="Jour Suivant" />
+                                          <Button layoutX="43.0" layoutY="36.0" mnemonicParsing="false" text="Changer Mode" />
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                              <TableView prefHeight="253.0" prefWidth="287.0">
+                                <columns>
+                                  <TableColumn prefWidth="96.0" text="Nom" />
+                                  <TableColumn prefWidth="96.0" text="Quantité" />
+                                    <TableColumn prefWidth="93.0" text="Valeur" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
