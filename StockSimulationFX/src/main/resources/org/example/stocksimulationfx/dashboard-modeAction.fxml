@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.stocksimulationfx.DashboardActionController">
    <children>
-      <Text layoutX="250.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The DashBoard" />
+      <ComboBox layoutX="7.0" layoutY="82.0" prefWidth="150.0" />
+      <Pane layoutX="180.0" layoutY="7.0" prefHeight="255.0" prefWidth="424.0">
+         <children>
+            <Text layoutX="162.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The curve" />
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
