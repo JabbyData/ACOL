@@ -14,7 +14,7 @@ public class DashboardPortfolioController {
     private TextField valuePortfolio;
 
     @FXML
-    void handleQuit(){
+    public void handleQuit(){
         Stage stage = (Stage) Date.getScene().getWindow();
         boolean answer = ConfirmQuitBox.display("Confirm Quit", "Are you sure you want to quit?");
         if (answer)
@@ -22,7 +22,7 @@ public class DashboardPortfolioController {
     }
 
     @FXML
-    void handleDeconnexion() throws IOException {
+    public void handleDeconnexion() throws IOException {
         Stage stage = (Stage) Date.getScene().getWindow();
         boolean answer = ConfirmQuitBox.display("Confirm Decconexion", "Are you sure you want to deconnect?");
         if (answer) {
@@ -33,7 +33,7 @@ public class DashboardPortfolioController {
     }
 
     @FXML
-    void handleAction() throws Exception {
+    public void handleAction() throws Exception {
         Stage stage = (Stage) Date.getScene().getWindow();
         stage.close();
         DashBoardAction dashBoardAction = new DashBoardAction();
@@ -41,14 +41,13 @@ public class DashboardPortfolioController {
     }
 
     @FXML
-    void nextDay(){
+    public void nextDay(){
         // TODO : implement next day + updates
         System.out.println("Next day");
     }
 
     @FXML
-    void displayPortfolio(){
+    public void displayPortfolio(){
         // TODO : implement display portfolio
     }
-
 }

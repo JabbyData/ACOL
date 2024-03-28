@@ -6,8 +6,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.*;
 
 public class ConfirmQuitBox {
-
-    static boolean answer;
+    private static boolean answer;
     public static boolean display(String title, String message) {
         Stage window = new Stage();
         window.initModality(Modality.APPLICATION_MODAL);

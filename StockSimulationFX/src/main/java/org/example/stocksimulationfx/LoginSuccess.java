@@ -8,10 +8,6 @@ import javafx.stage.*;
 
 public class LoginSuccess {
     private static Stage window;
-
-    public Stage getWindow() {
-        return window;
-    }
     public void display(String Title, String message, Stage loginStage) {
         window = new Stage();
         window.initModality(Modality.APPLICATION_MODAL);
@@ -52,6 +48,4 @@ public class LoginSuccess {
         DashBoardAction dashBoardAction = new DashBoardAction();
         dashBoardAction.start(new Stage());
     }
-
-
 }

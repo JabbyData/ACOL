@@ -1,15 +1,10 @@
 package org.example.stocksimulationfx;
 
-import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import static javafx.application.Application.launch;
 
-public class DashBoardPortfolio extends Application {
-    public static void main(String[] args) {
-        launch(args);
-    }
+public class DashBoardPortfolio extends DashBoard {
     @Override
     public void start(Stage stage) throws Exception {
         javafx.fxml.FXMLLoader fxmlLoader = new javafx.fxml.FXMLLoader(DashBoardPortfolio.class.getResource("dashboard-modePortefeuille.fxml"));
