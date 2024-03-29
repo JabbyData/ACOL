@@ -3,13 +3,13 @@ package org.example.stocksimulationfx;
 public class User {
     private String username;
     private String password;
-    private Portfolio portfolio;
 
-    /* constructor */
-    public User(String username, String password, Portfolio portfolio) {
+    private Wallet wallet;
+
+    public User(String username, String password) {
         this.username = username;
         this.password = password;
-        this.portfolio = portfolio;
+        this.wallet = new Wallet();
     }
 
     /* getter */
@@ -19,5 +19,9 @@ public class User {
 
     public String getPassword() {
         return password;
+    }
+
+    public Wallet getWallet() {
+        return wallet;
     }
 }

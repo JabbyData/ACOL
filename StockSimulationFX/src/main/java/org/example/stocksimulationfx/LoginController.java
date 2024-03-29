@@ -19,7 +19,7 @@ public class LoginController extends Controller{
     @FXML
     private PasswordField passwordField;
 
-    private User user = new User("a","p",null); /* for now, only one user with the following logins */
+    private User user = new User("a","p"); /* for now, only one user with the following logins */
 
     public User getUser() {
         return user;
