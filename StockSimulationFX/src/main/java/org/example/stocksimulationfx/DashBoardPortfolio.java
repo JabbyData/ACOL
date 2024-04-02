@@ -1,5 +1,6 @@
 package org.example.stocksimulationfx;
 
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -8,7 +9,10 @@ public class DashBoardPortfolio extends DashBoard {
     @Override
     public void start(Stage stage) throws Exception {
         javafx.fxml.FXMLLoader fxmlLoader = new javafx.fxml.FXMLLoader(DashBoardPortfolio.class.getResource("dashboard-modePortefeuille.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+        Parent root = fxmlLoader.load();
+        DashboardPortfolioController controller = fxmlLoader.getController();
+        controller.setDate();
+        Scene scene = new Scene(root, 600, 400);
         stage.setScene(scene);
         stage.setOnCloseRequest(e -> {
             e.consume();

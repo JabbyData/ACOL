@@ -13,8 +13,8 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <TextField alignment="CENTER" editable="false" layoutX="96.0" layoutY="18.0" text="date here" />
-                  <TextField fx:id="Date" alignment="CENTER" editable="false" layoutX="21.0" layoutY="18.0" prefHeight="24.0" prefWidth="69.0" text="Date" />
+                  <TextField fx:id="date" alignment="CENTER" editable="false" layoutX="96.0" layoutY="18.0" text="date here" />
+                  <TextField alignment="CENTER" editable="false" layoutX="21.0" layoutY="18.0" prefHeight="24.0" prefWidth="69.0" text="Date" />
                   <TextField fx:id="valuePortfolio" alignment="CENTER" editable="false" layoutX="351.0" layoutY="18.0" prefHeight="24.0" prefWidth="69.0" text="Valeur" />
                   <TextField alignment="CENTER" editable="false" layoutX="427.0" layoutY="18.0" text="valeur here" />
                </children>

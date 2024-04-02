@@ -1,19 +1,18 @@
 package org.example.stocksimulationfx;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.scene.Parent;
+import java.io.IOException;
 
 public class DashBoardAction extends DashBoard {
-    public DashBoardAction(DashboardActionController dashboardActionController) {
-        this.controller = dashboardActionController;
-        this.fxmlLoader = new javafx.fxml.FXMLLoader(DashBoardAction.class.getResource("dashboard-modeAction.fxml"));
-    }
-    public void setDate(){
-        this.controller.setDate();
-    }
     @Override
     public void start(Stage stage) throws Exception {
-        setDate();
-        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+        javafx.fxml.FXMLLoader fxmlLoader = new javafx.fxml.FXMLLoader(DashBoardPortfolio.class.getResource("dashboard-modeAction.fxml"));
+        Parent root = fxmlLoader.load();
+        DashboardActionController controller = fxmlLoader.getController();
+        controller.setDate();
+        controller.setStocks();
+        Scene scene = new Scene(root, 600, 400);
         stage.setScene(scene);
         stage.setOnCloseRequest(e -> {
             e.consume();
