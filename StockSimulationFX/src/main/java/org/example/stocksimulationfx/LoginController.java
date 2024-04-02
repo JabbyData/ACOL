@@ -19,16 +19,11 @@ public class LoginController extends Controller{
     @FXML
     private PasswordField passwordField;
 
-    private User user = new User("a","p"); /* for now, only one user with the following logins */
-
-    public User getUser() {
-        return user;
-    }
     @FXML
     void handleLogin(){
         String username = usernameField.getText();
         String password = passwordField.getText();
-        if (username.equals(this.getUser().getUsername()) && password.equals(this.getUser().getPassword())) {
+        if (username.equals(this.user.getUsername()) && password.equals(this.user.getPassword())) {
             Scene prevScene = usernameField.getScene();
             prevScene.getRoot().setOpacity(0.2);
             Stage loginStage = (Stage) usernameField.getScene().getWindow();

@@ -6,17 +6,16 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class DashboardActionController {
+public class DashboardActionController extends Controller {
     @FXML
     private TextField date;
 
     @FXML
     private TextField selecDate;
 
-    @FXML
-    public void setDate(String date){
-        //TODO : set the date with the good format JJ/MM/AAAA
-        System.out.println("setDate");
+    public void setDate(){
+        String new_date = String.valueOf(market.getDate());
+        date.setText("Jour " + new_date);
     }
 
     @FXML

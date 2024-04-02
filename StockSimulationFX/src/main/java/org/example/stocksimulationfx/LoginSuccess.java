@@ -45,7 +45,7 @@ public class LoginSuccess {
     public void goToDashboard(Stage loginStage) throws Exception {
         loginStage.close();
         window.close();
-        DashBoardAction dashBoardAction = new DashBoardAction();
+        DashBoardAction dashBoardAction = new DashBoardAction(new DashboardActionController());
         dashBoardAction.start(new Stage());
     }
 }

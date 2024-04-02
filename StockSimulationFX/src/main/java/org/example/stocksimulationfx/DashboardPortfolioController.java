@@ -8,14 +8,20 @@ import java.io.IOException;
 
 public class DashboardPortfolioController {
     @FXML
-    private TextField Date;
+    private TextField date;
 
     @FXML
     private TextField valuePortfolio;
 
     @FXML
+    public void setDate(){
+        String new_date = "balbla";
+        this.date.setText(new_date);
+    }
+
+    @FXML
     public void handleQuit(){
-        Stage stage = (Stage) Date.getScene().getWindow();
+        Stage stage = (Stage) date.getScene().getWindow();
         boolean answer = ConfirmQuitBox.display("Confirm Quit", "Are you sure you want to quit?");
         if (answer)
             stage.close();
@@ -23,8 +29,8 @@ public class DashboardPortfolioController {
 
     @FXML
     public void handleDeconnexion() throws IOException {
-        Stage stage = (Stage) Date.getScene().getWindow();
-        boolean answer = ConfirmQuitBox.display("Confirm Decconexion", "Are you sure you want to deconnect?");
+        Stage stage = (Stage) date.getScene().getWindow();
+        boolean answer = ConfirmQuitBox.display("Confirm Deconnexion", "Are you sure you want to deconnect?");
         if (answer) {
             stage.close();
             LoginApplication loginApplication = new LoginApplication();
@@ -34,9 +40,9 @@ public class DashboardPortfolioController {
 
     @FXML
     public void handleAction() throws Exception {
-        Stage stage = (Stage) Date.getScene().getWindow();
+        Stage stage = (Stage) date.getScene().getWindow();
         stage.close();
-        DashBoardAction dashBoardAction = new DashBoardAction();
+        DashBoardAction dashBoardAction = new DashBoardAction(new DashboardActionController());
         dashBoardAction.start(new Stage());
     }
 
