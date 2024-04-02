@@ -4,12 +4,12 @@ public class User {
     private String username;
     private String password;
 
-    private Wallet wallet;
+    private Portfolio Portfolio;
 
     public User(String username, String password) {
         this.username = username;
         this.password = password;
-        this.wallet = new Wallet();
+        this.Portfolio = new Portfolio();
     }
 
     /* getter */
@@ -21,7 +21,7 @@ public class User {
         return password;
     }
 
-    public Wallet getWallet() {
-        return wallet;
+    public Portfolio getPortfolio() {
+        return Portfolio;
     }
 }

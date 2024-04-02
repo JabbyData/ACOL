@@ -8,19 +8,19 @@ public class Transaction extends AbstractPosition {
         this.date = date;
     }
 
-    public void execute(Wallet wallet) {
-        Position position = wallet.getPosition(this.getStock());
+    public void execute(Portfolio Portfolio) {
+        Position position = Portfolio.getPosition(this.getStock());
 
         float transactionValue =  this.getQuantity() * this.getStock().getCurrentPrice();
 
         if (this.getIsBuy()) {
-            if (wallet.getCash() < transactionValue) {
+            if (Portfolio.getCash() < transactionValue) {
                 //TODO afficher message d'erreur "Capital insuffisant
                 return;
             }
-            wallet.addCash(- transactionValue);
+            Portfolio.addCash(- transactionValue);
         } else {
-            wallet.addCash(transactionValue);
+            Portfolio.addCash(transactionValue);
             if (position.getQuantity() == 0) {
                 position.inversePosition();
             }
