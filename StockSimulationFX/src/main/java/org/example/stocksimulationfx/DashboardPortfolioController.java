@@ -2,6 +2,7 @@ package org.example.stocksimulationfx;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -51,19 +52,12 @@ public class DashboardPortfolioController extends Controller {
             loginApplication.start(new Stage());
         }
     }
-
     @FXML
     public void handleAction() throws Exception {
         Stage stage = (Stage) date.getScene().getWindow();
         stage.close();
         DashBoardAction dashBoardAction = new DashBoardAction();
         dashBoardAction.start(new Stage());
-    }
-
-    @FXML
-    public void nextDay(){
-        // TODO : implement next day + updates
-        System.out.println("Next day");
     }
 
     @FXML
@@ -79,6 +73,7 @@ public class DashboardPortfolioController extends Controller {
         int date = market.getDate();
         float sum = user.getPortfolio().getCash();
         for (Position p: user.getPortfolio().getPositions()) {
+            p.udpateValue(date);
             sum += p.getValue();
         }
         value.setText(sum + " $");
@@ -98,5 +93,19 @@ public class DashboardPortfolioController extends Controller {
             positions.add(p);
         }
         return positions;
+    }
+    @FXML
+    public void nextDay(ActionEvent actionEvent) {
+        boolean finished = market.nextDay();
+        if (finished) {
+            Stage stage = (Stage) date.getScene().getWindow();
+            stage.close();
+        }
+        else {
+            setDate();
+            setCash();
+            setValue();
+            populateTable();
+        }
     }
 }

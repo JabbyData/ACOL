@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Market {
+    private final int date_max = 3; /* nb of days of fun */
     private int date;
     private User user;
     private HashSet<Stock> stocks;
@@ -45,5 +46,20 @@ public class Market {
             }
         }
         return null;
+    }
+
+    public boolean nextDay() {
+        date += 1;
+        if (date > date_max){
+            float balance = user.getPortfolio().getBalance();
+            if (balance > user.getPortfolio().getInitialCash()){
+                AlertBox.display("Bravo", "Vous avez gagné " + String.valueOf(balance - user.getPortfolio().getInitialCash()) + " $");
+            }
+            else {
+                AlertBox.display("Dommage", "Vous avez perdu " + String.valueOf(user.getPortfolio().getInitialCash() - balance) + " $");
+            }
+            return true;
+        }
+        return false;
     }
 }

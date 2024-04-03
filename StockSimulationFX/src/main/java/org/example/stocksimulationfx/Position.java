@@ -9,4 +9,5 @@ public class Position extends AbstractPosition {
     public void setQuantity(int quantity) {
         super.setQuantity(quantity);
     }
+
 }

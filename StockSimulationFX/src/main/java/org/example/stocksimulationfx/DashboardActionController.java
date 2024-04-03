@@ -5,7 +5,6 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -34,18 +33,24 @@ public class DashboardActionController extends Controller {
     }
 
     @FXML
+    private void nextDay(){
+        boolean finished = market.nextDay();
+        if (finished) {
+            Stage stage = (Stage) date.getScene().getWindow();
+            stage.close();
+        }
+        else {
+            setDate();
+        }
+    }
+
+    @FXML
     public void displayCurve(){
         String stockName = stocks.getValue();
         Image new_image = new Image("file:src/main/resources/Images/" + stockName + ".jpg"); //TODO : update in png
         curve.setImage(new_image);
         int quantity = market.getStock(stockName).getQuantity();
         quantityAvailable.setText(String.valueOf(quantity));
-    }
-
-    @FXML
-    public void nextDay(){
-        //TODO : go to the next day and update values
-        System.out.println("nextDay");
     }
 
     @FXML

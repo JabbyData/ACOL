@@ -20,11 +20,14 @@ public abstract class AbstractPosition {
     public int getQuantity() {
         return quantity;
     }
-    public float getValue() {
-        return value;
+    public float getValue() {return value;
     }
     public String getStockName() {
         return stockName;
+    }
+
+    public void udpateValue(int date) {
+        this.value = stock.getCurrentPrice(date)*quantity;
     }
 
     protected void setQuantity(int quantity) {

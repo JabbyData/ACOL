@@ -2,11 +2,12 @@ package org.example.stocksimulationfx;
 import java.util.ArrayList;
 
 public class Portfolio {
+    private final float initialCash = 100000;
     private ArrayList<Position> positions;
     private float cash;
 
     public Portfolio() {
-        this.cash = 100000; /* initial capital */
+        this.cash = initialCash; /* initial capital */
         this.positions = new ArrayList<>();
     }
 
@@ -31,5 +32,17 @@ public class Portfolio {
 
     public ArrayList<Position> getPositions() {
         return positions;
+    }
+
+    public float getInitialCash() {
+        return initialCash;
+    }
+
+    public float getBalance() {
+        float balance = cash;
+        for (Position p: positions) {
+            balance += p.getValue();
+        }
+        return balance;
     }
 }
