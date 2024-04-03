@@ -15,8 +15,10 @@
                <children>
                   <TextField fx:id="date" alignment="CENTER" editable="false" layoutX="96.0" layoutY="18.0" text="date here" />
                   <TextField alignment="CENTER" editable="false" layoutX="21.0" layoutY="18.0" prefHeight="24.0" prefWidth="69.0" text="Date" />
-                  <TextField fx:id="valuePortfolio" alignment="CENTER" editable="false" layoutX="351.0" layoutY="18.0" prefHeight="24.0" prefWidth="69.0" text="Valeur" />
-                  <TextField alignment="CENTER" editable="false" layoutX="427.0" layoutY="18.0" text="valeur here" />
+                  <TextField alignment="CENTER" editable="false" layoutX="345.0" layoutY="6.0" prefHeight="24.0" prefWidth="69.0" text="Valeur" />
+                  <TextField fx:id="value" alignment="CENTER" editable="false" layoutX="427.0" layoutY="6.0" text="valeur here" />
+                  <TextField alignment="CENTER" editable="false" layoutX="345.0" layoutY="33.0" prefHeight="24.0" prefWidth="69.0" text="Cash" />
+                  <TextField fx:id="cash" alignment="CENTER" editable="false" layoutX="427.0" layoutY="33.0" text="valeur here" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">

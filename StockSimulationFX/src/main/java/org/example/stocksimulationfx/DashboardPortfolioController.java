@@ -11,7 +11,10 @@ public class DashboardPortfolioController extends Controller {
     private TextField date;
 
     @FXML
-    private TextField valuePortfolio;
+    private TextField cash;
+
+    @FXML
+    private TextField value;
 
     @FXML
     public void setDate(){
@@ -55,5 +58,18 @@ public class DashboardPortfolioController extends Controller {
     @FXML
     public void displayPortfolio(){
         // TODO : implement display portfolio
+    }
+
+    public void setCash() {
+        cash.setText(user.getPortfolio().getCash() + " $");
+    }
+
+    public void setValue() {
+        int date = market.getDate();
+        float sum = user.getPortfolio().getCash();
+        for (Position p: user.getPortfolio().getPositions()) {
+            sum += p.getValue(date);
+        }
+        value.setText(sum + " $");
     }
 }

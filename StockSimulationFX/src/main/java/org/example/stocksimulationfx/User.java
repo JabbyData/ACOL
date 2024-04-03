@@ -1,9 +1,10 @@
 package org.example.stocksimulationfx;
 
+import java.util.ArrayList;
+
 public class User {
     private String username;
     private String password;
-
     private Portfolio Portfolio;
 
     public User(String username, String password) {

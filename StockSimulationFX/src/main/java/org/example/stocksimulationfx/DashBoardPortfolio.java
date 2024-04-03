@@ -12,6 +12,8 @@ public class DashBoardPortfolio extends DashBoard {
         Parent root = fxmlLoader.load();
         DashboardPortfolioController controller = fxmlLoader.getController();
         controller.setDate();
+        controller.setCash();
+        controller.setValue();
         Scene scene = new Scene(root, 600, 400);
         stage.setScene(scene);
         stage.setOnCloseRequest(e -> {

@@ -8,9 +8,12 @@ public class Stock {
     private String name;
     private ArrayList<Float> prices;
 
-    public Stock(String name, ArrayList<Float> prices) {
+    private int quantity;
+
+    public Stock(String name, ArrayList<Float> prices, int quantity) {
         this.name = name;
         this.prices = prices;
+        this.quantity = quantity;
     }
 
     public String getName() {
@@ -29,18 +32,17 @@ public class Stock {
         prices.add(price);
     }
 
-    public float getCurrentPrice() {
+    public float getCurrentPrice(int date) {
         if (prices.isEmpty()) {
             throw new NoSuchElementException("Prices list is empty");
         }
-        return prices.get(prices.size() - 1);
+        return prices.get(date - 1);
+    }
+    public int getQuantity() {
+        return quantity;
     }
 
-    @Override
-    public String toString() {
-        return "Stock{" +
-                "name='" + name + '\'' +
-                ", prices=" + prices +
-                '}';
+    public void setQuantity(int i) {
+        this.quantity = i;
     }
 }

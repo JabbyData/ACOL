@@ -2,13 +2,11 @@ package org.example.stocksimulationfx;
 
 public class Position extends AbstractPosition {
 
-    public Position(boolean isBuy, Stock stock, int quantity) {
-        super(isBuy, stock, quantity);
+    public Position( Stock stock, int quantity) {
+        super(stock, quantity);
     }
 
     public void setQuantity(int quantity) {
         super.setQuantity(quantity);
     }
-
-
 }

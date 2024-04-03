@@ -1,12 +1,10 @@
 package org.example.stocksimulationfx;
 
 public abstract class AbstractPosition {
-    private boolean isBuy;
-    private Stock stock;
-    private int quantity;
+    protected Stock stock;
+    protected int quantity;
 
-    public AbstractPosition(boolean isBuy, Stock stock, int quantity) {
-        this.isBuy = isBuy;
+    public AbstractPosition(Stock stock, int quantity) {
         this.stock = stock;
         this.quantity = quantity;
     }
@@ -19,38 +17,16 @@ public abstract class AbstractPosition {
         return stock;
     }
 
-    public float getValue() {
-        float price = stock.getCurrentPrice();
-
-        if (isBuy) {
-            return this.quantity * price;
-        }
-
-        return - this.quantity * price;
-    }
-
-    public boolean getIsBuy() {
-        return isBuy;
+    public float getValue(int date) {
+        float price = stock.getCurrentPrice(date);
+        return price * quantity;
     }
 
     protected void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 
-    protected void inversePosition() {
-        this.isBuy = !this.isBuy;
-    }
-
-    public boolean sameDirection(AbstractPosition pos) {
-        return isBuy == pos.getIsBuy();
-    }
-
-    @Override
-    public String toString() {
-        return "AbstractPosition{" +
-                "isBuy=" + isBuy +
-                ", stock=" + stock +
-                ", quantity=" + quantity +
-                '}';
+    public void addQuantity(int i) {
+        this.quantity += i;
     }
 }

@@ -16,11 +16,11 @@ public class Market {
         this.user = user;
         this.stocks = stocks;
         /* automatic fill of the stocks */
-        Stock Apple = new Stock("Apple", new ArrayList<Float>());
+        Stock Apple = new Stock("Apple", new ArrayList<Float>(), 10);
         Apple.addPrice(100.0f);
         Apple.addPrice(101.0f);
         Apple.addPrice(102.0f);
-        Stock Microsoft = new Stock("Microsoft", new ArrayList<Float>());
+        Stock Microsoft = new Stock("Microsoft", new ArrayList<Float>(), 10);
         Microsoft.addPrice(200.0f);
         Microsoft.addPrice(201.0f);
         Microsoft.addPrice(202.0f);
@@ -36,5 +36,14 @@ public class Market {
 
     public HashSet<Stock> getStocks() {
         return stocks;
+    }
+
+    public Stock getStock(String stockName) {
+        for (Stock s: stocks) {
+            if (s.getName().equals(stockName)) {
+                return s;
+            }
+        }
+        return null;
     }
 }

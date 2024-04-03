@@ -7,8 +7,8 @@ import java.util.Hashtable;
 import java.util.Set;
 
 public abstract class Controller {
-    protected User user = new User("a","p");
-    protected Market market = new Market(user, new HashSet<Stock>(), new ArrayList<Transaction>());
+    protected static User user = new User("a","p");
+    protected static Market market = new Market(user, new HashSet<Stock>(), new ArrayList<Transaction>());
 
     abstract void handleQuit();
 }
