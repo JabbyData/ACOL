@@ -40,11 +40,11 @@
                                     </AnchorPane>
                                 </items>
                               </SplitPane>
-                              <TableView prefHeight="253.0" prefWidth="287.0">
+                              <TableView fx:id="table" prefHeight="253.0" prefWidth="287.0">
                                 <columns>
-                                  <TableColumn prefWidth="96.0" text="Nom" />
-                                  <TableColumn prefWidth="96.0" text="Quantité" />
-                                    <TableColumn prefWidth="93.0" text="Valeur" />
+                                  <TableColumn fx:id="stockColumn" prefWidth="96.0" text="Nom" />
+                                  <TableColumn fx:id="quantityColumn" prefWidth="96.0" text="Quantité" />
+                                    <TableColumn fx:id="valueColumn" prefWidth="93.0" text="Valeur" />
                                 </columns>
                               </TableView>
                            </children>

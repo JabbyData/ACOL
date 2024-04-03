@@ -52,7 +52,7 @@ public class DashboardActionController extends Controller {
     public void buyStock(){
         String stockName = stocks.getValue();
         Stock stock = market.getStock(stockName);
-        Position position = user.getPortfolio().getPosition(stock);
+        Position position = user.getPortfolio().getPosition(stock, market.getDate());
         int quantityAvailableValue = stock.getQuantity();
         int quantity = Integer.parseInt(nbPositions.getText());
         if (quantityAvailableValue <= 0 || quantity > quantityAvailableValue){
@@ -66,7 +66,7 @@ public class DashboardActionController extends Controller {
             }
             else {
                 user.getPortfolio().addCash(-price*quantity);
-                position.addQuantity(quantity);
+                position.addQuantity(quantity,market.getDate());
                 stock.setQuantity(quantityAvailableValue - quantity);
                 quantityAvailable.setText(String.valueOf(stock.getQuantity()));
             }
@@ -79,11 +79,11 @@ public class DashboardActionController extends Controller {
         String stockName = stocks.getValue();
         Stock stock = market.getStock(stockName);
         int quantityAvailableValue = stock.getQuantity();
-        Position position = user.getPortfolio().getPosition(stock);
+        Position position = user.getPortfolio().getPosition(stock, market.getDate());
         int quantity = Integer.parseInt(nbPositions.getText());
         float price = stock.getCurrentPrice(date);
         user.getPortfolio().addCash(price*quantity);
-        position.addQuantity(-quantity);
+        position.addQuantity(-quantity, market.getDate());
         stock.setQuantity(quantityAvailableValue + quantity);
         quantityAvailable.setText(String.valueOf(stock.getQuantity()));
     }

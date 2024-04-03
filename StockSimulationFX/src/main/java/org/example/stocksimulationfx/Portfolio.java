@@ -14,13 +14,13 @@ public class Portfolio {
         return cash;
     }
 
-    public Position getPosition(Stock stock) {
+    public Position getPosition(Stock stock, int date) {
         for (Position p: positions) {
             if (p.getStock().equals(stock)) {
                 return p;
             }
         }
-        Position pos = new Position( stock, 0);
+        Position pos = new Position( stock, 0, date);
         this.positions.add(pos);
         return pos;
     }

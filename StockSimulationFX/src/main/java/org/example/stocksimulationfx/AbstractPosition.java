@@ -2,31 +2,37 @@ package org.example.stocksimulationfx;
 
 public abstract class AbstractPosition {
     protected Stock stock;
+    protected String stockName;
     protected int quantity;
 
-    public AbstractPosition(Stock stock, int quantity) {
+    protected float value;
+
+    public AbstractPosition(Stock stock, int quantity, int date) {
         this.stock = stock;
         this.quantity = quantity;
-    }
-
-    protected int getQuantity() {
-        return quantity;
+        this.value = stock.getCurrentPrice(date)*quantity;
+        this.stockName = stock.getName();
     }
 
     public Stock getStock() {
         return stock;
     }
-
-    public float getValue(int date) {
-        float price = stock.getCurrentPrice(date);
-        return price * quantity;
+    public int getQuantity() {
+        return quantity;
+    }
+    public float getValue() {
+        return value;
+    }
+    public String getStockName() {
+        return stockName;
     }
 
     protected void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 
-    public void addQuantity(int i) {
+    public void addQuantity(int i, int date) {
         this.quantity += i;
+        this.value += i*stock.getCurrentPrice(date);
     }
 }

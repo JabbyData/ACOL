@@ -14,6 +14,7 @@ public class DashBoardPortfolio extends DashBoard {
         controller.setDate();
         controller.setCash();
         controller.setValue();
+        controller.populateTable();
         Scene scene = new Scene(root, 600, 400);
         stage.setScene(scene);
         stage.setOnCloseRequest(e -> {

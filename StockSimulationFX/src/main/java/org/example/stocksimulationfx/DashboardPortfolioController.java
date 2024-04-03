@@ -1,7 +1,12 @@
 package org.example.stocksimulationfx;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -9,12 +14,18 @@ import java.io.IOException;
 public class DashboardPortfolioController extends Controller {
     @FXML
     private TextField date;
-
     @FXML
     private TextField cash;
-
     @FXML
     private TextField value;
+    @FXML
+    private TableView<Position> table;
+    @FXML
+    private TableColumn<Position, String> stockColumn;
+    @FXML
+    private TableColumn<Position, Integer> quantityColumn;
+    @FXML
+    private TableColumn<Position, Float> valueColumn;
 
     @FXML
     public void setDate(){
@@ -68,8 +79,24 @@ public class DashboardPortfolioController extends Controller {
         int date = market.getDate();
         float sum = user.getPortfolio().getCash();
         for (Position p: user.getPortfolio().getPositions()) {
-            sum += p.getValue(date);
+            sum += p.getValue();
         }
         value.setText(sum + " $");
+    }
+
+    public void populateTable(){
+        stockColumn.setCellValueFactory(new PropertyValueFactory<>("stockName"));
+        quantityColumn.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+        valueColumn.setCellValueFactory(new PropertyValueFactory<>("value"));
+        table.setItems(getPositions());
+        table.getColumns().setAll(stockColumn, quantityColumn, valueColumn);
+    }
+
+    public ObservableList<Position> getPositions() {
+        ObservableList<Position> positions = FXCollections.observableArrayList();
+        for (Position p : user.getPortfolio().getPositions()) {
+            positions.add(p);
+        }
+        return positions;
     }
 }
