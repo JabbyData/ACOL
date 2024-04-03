@@ -40,7 +40,7 @@
                     <items>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="260.0" prefWidth="455.0">
                            <children>
-                              <ImageView fx:id="curve" fitHeight="281.0" fitWidth="457.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="curve" fitHeight="264.0" fitWidth="457.0" pickOnBounds="true" preserveRatio="true" />
                            </children></AnchorPane>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="147.0" prefWidth="455.0">
                            <children>

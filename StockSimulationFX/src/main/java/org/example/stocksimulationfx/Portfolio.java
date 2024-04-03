@@ -2,13 +2,19 @@ package org.example.stocksimulationfx;
 import java.util.ArrayList;
 
 public class Portfolio {
-    private final float initialCash = 100000;
+    private final float initialCash = 10000;
+    private ArrayList<Float> valueHistory;
     private ArrayList<Position> positions;
     private float cash;
 
     public Portfolio() {
         this.cash = initialCash; /* initial capital */
         this.positions = new ArrayList<>();
+        this.valueHistory = new ArrayList<>();
+        valueHistory.add(initialCash);
+    }
+    public ArrayList<Float> getValueHistory() {
+        return valueHistory;
     }
 
     public float getCash() {

@@ -35,6 +35,10 @@ public class Market {
         return date;
     }
 
+    public int getDate_max() {
+        return date_max;
+    }
+
     public HashSet<Stock> getStocks() {
         return stocks;
     }

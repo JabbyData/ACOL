@@ -2,7 +2,6 @@ package org.example.stocksimulationfx;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
-import java.io.IOException;
 
 public class DashBoardAction extends DashBoard {
     @Override

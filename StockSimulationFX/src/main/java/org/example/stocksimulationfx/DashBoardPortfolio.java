@@ -13,7 +13,7 @@ public class DashBoardPortfolio extends DashBoard {
         DashboardPortfolioController controller = fxmlLoader.getController();
         controller.setDate();
         controller.setCash();
-        controller.setValue();
+        controller.setValue(); /* prepare value display */
         controller.populateTable();
         Scene scene = new Scene(root, 600, 400);
         stage.setScene(scene);
