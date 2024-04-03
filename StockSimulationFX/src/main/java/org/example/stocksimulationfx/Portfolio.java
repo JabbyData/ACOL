@@ -44,6 +44,15 @@ public class Portfolio {
         return initialCash;
     }
 
+    public void updateValue(int date){
+        float sum = cash;
+        for (Position p: positions) {
+            p.udpateValue(date);
+            sum += p.getValue();
+        }
+        valueHistory.add(sum);
+    }
+
     public float getBalance() {
         float balance = cash;
         for (Position p: positions) {

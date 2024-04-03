@@ -44,12 +44,7 @@ public class DashboardActionController extends Controller {
         } else {
             setDate();
             int date = market.getDate();
-            float sum = user.getPortfolio().getCash();
-            for (Position p: user.getPortfolio().getPositions()) {
-                p.udpateValue(date);
-                sum += p.getValue();
-            }
-            user.getPortfolio().getValueHistory().add(sum);
+            user.getPortfolio().updateValue(date);
             if (stocks.getValue() != null) {
                 displayCurve();
             }

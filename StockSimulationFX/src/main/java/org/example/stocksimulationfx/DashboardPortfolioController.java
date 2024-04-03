@@ -121,7 +121,7 @@ public class DashboardPortfolioController extends Controller {
 
         /* draw the curve */
         g2d.setColor(Color.BLUE);
-        for (int i = 1; i < size - 1; i++) {
+        for (int i = 0; i < size-1; i++) {
             g2d.drawLine(60 + 50 * i, 350 - (int) (30 * (valueHistory.get(i) - min) / range), 60 + 50 * (i+1), 350 - (int) (30 * (valueHistory.get(i+1) - min) / range));
         }
 
@@ -146,12 +146,7 @@ public class DashboardPortfolioController extends Controller {
 
     public void UpdateValue(){
         int date = market.getDate();
-        float sum = user.getPortfolio().getCash();
-        for (Position p: user.getPortfolio().getPositions()) {
-            p.udpateValue(date);
-            sum += p.getValue();
-        }
-        user.getPortfolio().getValueHistory().add(sum);
+        user.getPortfolio().updateValue(date);
     }
 
     public void populateTable(){
