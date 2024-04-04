@@ -1,12 +1,13 @@
 package org.example.stocksimulationfx;
 
+import java.util.HashSet;
 import java.util.ArrayList;
 import java.util.HashSet;
 
 public class GameStock {
     private HashSet<Stock> stocks;
 
-    public GameStock(){
+    public GameStock() {
         this.stocks = new HashSet<Stock>();
     }
 
@@ -130,6 +131,174 @@ public class GameStock {
         danonePrices.add(58.52f);
         Stock danone = new Stock("danone", danonePrices, 500);
         stocks.add(danone);
+
+        ArrayList<Float> spotifyPrices = new ArrayList<>();
+        spotifyPrices.add(268.03f);
+        spotifyPrices.add(270.35f);
+        spotifyPrices.add(259.40f);
+        spotifyPrices.add(254.45f);
+        spotifyPrices.add(258.09f);
+        spotifyPrices.add(257.26f);
+        spotifyPrices.add(257.13f);
+        spotifyPrices.add(254.89f);
+        spotifyPrices.add(254.15f);
+        spotifyPrices.add(252.76f);
+        spotifyPrices.add(261.72f);
+        spotifyPrices.add(259.64f);
+        spotifyPrices.add(264.95f);
+        spotifyPrices.add(261.92f);
+        spotifyPrices.add(262.81f);
+        spotifyPrices.add(260.20f);
+        spotifyPrices.add(263.90f);
+        spotifyPrices.add(266.43f);
+        spotifyPrices.add(269.58f);
+        spotifyPrices.add(291.77f);
+        Stock spotify = new Stock("spotify", spotifyPrices, 600);
+        stocks.add(spotify);      
+
+        ArrayList<Float> lvmhPrices = new ArrayList<>();
+        lvmhPrices.add(839f);
+        lvmhPrices.add(829.1f);
+        lvmhPrices.add(832.6f);
+        lvmhPrices.add(839.8f);
+        lvmhPrices.add(844.9f);
+        lvmhPrices.add(850.4f);
+        lvmhPrices.add(859f);
+        lvmhPrices.add(867.2f);
+        lvmhPrices.add(872.8f);
+        lvmhPrices.add(862.3f);
+        lvmhPrices.add(858.1f);
+        lvmhPrices.add(860.2f);
+        lvmhPrices.add(846.2f);
+        lvmhPrices.add(847.9f);
+        lvmhPrices.add(828.6f);
+        lvmhPrices.add(825.5f);
+        lvmhPrices.add(821.8f);
+        lvmhPrices.add(830.3f);
+        lvmhPrices.add(833.7f);
+        lvmhPrices.add(821.8f);
+        Stock lvmh = new Stock("lvmh", lvmhPrices, 100);
+        stocks.add(lvmh);      
+        
+        ArrayList<Float> hermesPrices = new ArrayList<>();
+        hermesPrices.add(2300f);
+        hermesPrices.add(2266f);
+        hermesPrices.add(2271f);
+        hermesPrices.add(2315f);
+        hermesPrices.add(2313f);
+        hermesPrices.add(2304f);
+        hermesPrices.add(2331f);
+        hermesPrices.add(2357f);
+        hermesPrices.add(2392f);
+        hermesPrices.add(2390f);
+        hermesPrices.add(2377f);
+        hermesPrices.add(2404f);
+        hermesPrices.add(2405f);
+        hermesPrices.add(2410f);
+        hermesPrices.add(2386f);
+        hermesPrices.add(2403f);
+        hermesPrices.add(2387f);
+        hermesPrices.add(2388f);
+        hermesPrices.add(2366f);
+        hermesPrices.add(2361f);
+        Stock hermes = new Stock("hermes", hermesPrices, 50);
+        stocks.add(hermes);      
+
+        ArrayList<Float> cocaPrices = new ArrayList<>();
+        cocaPrices.add(59.81f);
+        cocaPrices.add(59.52f);
+        cocaPrices.add(59.55f);
+        cocaPrices.add(59.44f);
+        cocaPrices.add(59.52f);
+        cocaPrices.add(60.24f);
+        cocaPrices.add(60.5f);
+        cocaPrices.add(61.12f);
+        cocaPrices.add(60.5f);
+        cocaPrices.add(59.88f);
+        cocaPrices.add(60.13f);
+        cocaPrices.add(60.23f);
+        cocaPrices.add(60.75f);
+        cocaPrices.add(60.47f);
+        cocaPrices.add(60.49f);
+        cocaPrices.add(60.4f);
+        cocaPrices.add(60.54f);
+        cocaPrices.add(61.03f);
+        cocaPrices.add(61.18f);
+        cocaPrices.add(60.68f);
+        Stock coca = new Stock("coca", cocaPrices, 500);
+        stocks.add(coca);      
+
+        ArrayList<Float> AXAPrices = new ArrayList<>();
+        AXAPrices.add(32.62f);
+        AXAPrices.add(32.73f);
+        AXAPrices.add(32.73f);
+        AXAPrices.add(33.10f);
+        AXAPrices.add(33.52f);
+        AXAPrices.add(33.28f);
+        AXAPrices.add(33.96f);
+        AXAPrices.add(33.82f);
+        AXAPrices.add(34.01f);
+        AXAPrices.add(34.33f);
+        AXAPrices.add(34.24f);
+        AXAPrices.add(34.62f);
+        AXAPrices.add(34.6f);
+        AXAPrices.add(34.65f);
+        AXAPrices.add(34.48f);
+        AXAPrices.add(34.58f);
+        AXAPrices.add(34.6f);
+        AXAPrices.add(34.69f);
+        AXAPrices.add(34.82f);
+        AXAPrices.add(35.14f);
+        Stock AXA = new Stock("AXA", AXAPrices, 500);
+        stocks.add(AXA);  
+        
+        ArrayList<Float> orangePrices = new ArrayList<>();
+        orangePrices.add(10.53f);
+        orangePrices.add(10.62f);
+        orangePrices.add(10.53f);
+        orangePrices.add(10.51f);
+        orangePrices.add(10.60f);
+        orangePrices.add(10.59f);
+        orangePrices.add(10.44f);
+        orangePrices.add(10.44f);
+        orangePrices.add(10.43f);
+        orangePrices.add(10.52f);
+        orangePrices.add(10.60f);
+        orangePrices.add(10.60f);
+        orangePrices.add(10.64f);
+        orangePrices.add(10.51f);
+        orangePrices.add(10.62f);
+        orangePrices.add(10.64f);
+        orangePrices.add(10.63f);
+        orangePrices.add(10.81f);
+        orangePrices.add(10.89f);
+        orangePrices.add(10.89f);
+        Stock orange = new Stock("orange", orangePrices, 1000);
+        stocks.add(orange);      
+
+        ArrayList<Float> teslaPrices = new ArrayList<>();
+        teslaPrices.add(188.14f);
+        teslaPrices.add(180.74f);
+        teslaPrices.add(176.54f);
+        teslaPrices.add(178.65f);
+        teslaPrices.add(175.34f);
+        teslaPrices.add(177.77f);
+        teslaPrices.add(177.54f);
+        teslaPrices.add(169.48f);
+        teslaPrices.add(162.5f);
+        teslaPrices.add(163.57f);
+        teslaPrices.add(173.8f);
+        teslaPrices.add(171.32f);
+        teslaPrices.add(175.66f);
+        teslaPrices.add(172.82f);
+        teslaPrices.add(170.83f);
+        teslaPrices.add(172.63f);
+        teslaPrices.add(177.67f);
+        teslaPrices.add(179.83f);
+        teslaPrices.add(175.79f);
+        teslaPrices.add(175.22f);
+        Stock tesla = new Stock("tesla", teslaPrices, 400);
+        stocks.add(tesla);      
     }
 
     public HashSet<Stock> getStocks() {

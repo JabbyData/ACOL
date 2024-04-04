@@ -207,6 +207,6 @@ public class DashboardActionController extends Controller {
     }
 
     public void setStocks() {
-        stocks.getItems().addAll("apple","microsoft","google","amazon","danone");
+        stocks.getItems().addAll("apple","microsoft","google","amazon","danone","spotify","lvmh","hermes","coca","AXA","orange","tesla");
     }
 }
