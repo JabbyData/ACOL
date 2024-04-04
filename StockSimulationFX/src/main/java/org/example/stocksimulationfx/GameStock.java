@@ -1,9 +1,14 @@
 package org.example.stocksimulationfx;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class GameStock {
-    private ArrayList<Stock> stocks;
+    private HashSet<Stock> stocks;
+
+    public GameStock(){
+        this.stocks = new HashSet<Stock>();
+    }
 
     public void createStocks(){
         ArrayList<Float> applePrices = new ArrayList<>();
@@ -127,7 +132,7 @@ public class GameStock {
         stocks.add(danone);
     }
 
-    public ArrayList<Stock> getStocks() {
+    public HashSet<Stock> getStocks() {
         return stocks;
     }
 }

@@ -115,14 +115,14 @@ public class DashboardPortfolioController extends Controller {
         /* fill x axis */
         int nbDays = market.getDate();
         for (int i = 0; i < nbDays; i++) {
-            g2d.drawLine(60 + 50 * (i+1), 350, 60 + 50 * (i+1), 355);
-            g2d.drawString(String.valueOf(i+1), 60 + 50 * (i+1), 365);
+            g2d.drawLine(60 + 25 * (i+1), 350, 60 + 25 * (i+1), 355);
+            g2d.drawString(String.valueOf(i+1), 60 + 25 * (i+1), 365);
         }
 
         /* draw the curve */
         g2d.setColor(Color.BLUE);
         for (int i = 0; i < size-1; i++) {
-            g2d.drawLine(60 + 50 * i, 350 - (int) (30 * (valueHistory.get(i) - min) / range), 60 + 50 * (i+1), 350 - (int) (30 * (valueHistory.get(i+1) - min) / range));
+            g2d.drawLine(60 + 25 * i, 350 - (int) (30 * (valueHistory.get(i) - min) / range), 60 + 25 * (i+1), 350 - (int) (30 * (valueHistory.get(i+1) - min) / range));
         }
 
 
