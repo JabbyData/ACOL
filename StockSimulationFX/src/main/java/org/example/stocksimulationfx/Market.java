@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 public class Market {
-    private final int date_max = 20; /* nb of days of fun */
+    private final int dateMax = 20; /* nb of days of fun */
     private int date;
     private User user;
     private HashSet<Stock> stocks;
@@ -25,8 +25,8 @@ public class Market {
         return date;
     }
 
-    public int getDate_max() {
-        return date_max;
+    public int getdateMax() {
+        return dateMax;
     }
 
     public HashSet<Stock> getStocks() {
@@ -44,7 +44,7 @@ public class Market {
 
     public boolean nextDay() {
         date += 1;
-        if (date > date_max){
+        if (date > dateMax){
             float balance = user.getPortfolio().getBalance();
             if (balance > user.getPortfolio().getInitialCash()){
                 AlertBox.display("Bravo", "Vous avez gagné " + String.valueOf(balance - user.getPortfolio().getInitialCash()) + " $");

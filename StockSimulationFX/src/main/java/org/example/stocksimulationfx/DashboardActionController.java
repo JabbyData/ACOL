@@ -92,7 +92,7 @@ public class DashboardActionController extends Controller {
             g2d.drawString(String.valueOf(min + i * (max - min)), 5, 355 - 30 * (i+1));
         }
         /* fill x axis */
-        int nbDays = market.getDate_max();
+        int nbDays = market.getdateMax();
         for (int i = 0; i < nbDays; i++) {
             g2d.drawLine(50 + 25 * i, 350, 50 + 25 * i, 345);
             g2d.drawString(String.valueOf(i + 1), 50 + 25 * i, 365);
@@ -125,7 +125,7 @@ public class DashboardActionController extends Controller {
         else {
             float price = stock.getCurrentPrice(market.getDate());
             float cash = user.getPortfolio().getCash();
-            if (cash < price) {
+            if (cash < price * quantity) {
                 AlertBox.display("Erreur", "Votre crédit est trop bas");
             }
             else {
