@@ -27,9 +27,8 @@ clique sur le bouton
 requête données 
 du jour N+1 ^yqNjui1z
 
-Affichage des nouvelles données:
-Si mode VP : data sur les valeurs 
-des titres à N+1 ^TjVGgig3
+Data sur les valeurs 
+des titres à N+1 puis calculs de la valeur du ptf ^TjVGgig3
 
 visualisation nouvelles données ^ZT98H8Ce
 
@@ -642,8 +641,8 @@ visualisation nouvelles données ^ZT98H8Ce
 		},
 		{
 			"type": "arrow",
-			"version": 119,
-			"versionNonce": 149270678,
+			"version": 253,
+			"versionNonce": 845271944,
 			"isDeleted": false,
 			"id": "BjyOxbtXN7wQlS44RFS_k",
 			"fillStyle": "solid",
@@ -652,12 +651,12 @@ visualisation nouvelles données ^ZT98H8Ce
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": 376.5,
-			"y": 120.6293471172778,
+			"x": 368.86396519757693,
+			"y": 118.0931152332198,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "transparent",
-			"width": 378,
-			"height": 0,
+			"width": 370.36396519757693,
+			"height": 2.5362318840579974,
 			"seed": 1973288818,
 			"groupIds": [],
 			"frameId": null,
@@ -665,14 +664,10 @@ visualisation nouvelles données ^ZT98H8Ce
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1710837331443,
+			"updated": 1712239106952,
 			"link": null,
 			"locked": false,
-			"startBinding": {
-				"elementId": "TjVGgig3",
-				"focus": 1.3536231884057968,
-				"gap": 13.260869565217376
-			},
+			"startBinding": null,
 			"endBinding": null,
 			"lastCommittedPoint": null,
 			"startArrowhead": null,
@@ -683,15 +678,15 @@ visualisation nouvelles données ^ZT98H8Ce
 					0
 				],
 				[
-					-378,
-					0
+					-370.36396519757693,
+					2.5362318840579974
 				]
 			]
 		},
 		{
 			"type": "text",
-			"version": 197,
-			"versionNonce": 558837206,
+			"version": 577,
+			"versionNonce": 934307464,
 			"isDeleted": false,
 			"id": "TjVGgig3",
 			"fillStyle": "solid",
@@ -700,35 +695,30 @@ visualisation nouvelles données ^ZT98H8Ce
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": 22.06521739130426,
-			"y": 133.89021668249518,
+			"x": 12.71739130434787,
+			"y": 141.00235927337906,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "transparent",
-			"width": 349.0595703125,
-			"height": 75,
+			"width": 348.68292914496556,
+			"height": 35.53931881012105,
 			"seed": 139542834,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": null,
-			"boundElements": [
-				{
-					"id": "BjyOxbtXN7wQlS44RFS_k",
-					"type": "arrow"
-				}
-			],
-			"updated": 1710837331443,
+			"boundElements": [],
+			"updated": 1712239246686,
 			"link": null,
 			"locked": false,
-			"fontSize": 20,
+			"fontSize": 14.215727524048404,
 			"fontFamily": 1,
-			"text": "Affichage des nouvelles données:\nSi mode VP : data sur les valeurs \ndes titres à N+1",
-			"rawText": "Affichage des nouvelles données:\nSi mode VP : data sur les valeurs \ndes titres à N+1",
+			"text": "Data sur les valeurs \ndes titres à N+1 puis calculs de la valeur du ptf",
+			"rawText": "Data sur les valeurs \ndes titres à N+1 puis calculs de la valeur du ptf",
 			"textAlign": "left",
 			"verticalAlign": "top",
 			"containerId": null,
-			"originalText": "Affichage des nouvelles données:\nSi mode VP : data sur les valeurs \ndes titres à N+1",
+			"originalText": "Data sur les valeurs \ndes titres à N+1 puis calculs de la valeur du ptf",
 			"lineHeight": 1.25,
-			"baseline": 68
+			"baseline": 30.000000000000043
 		},
 		{
 			"type": "arrow",
@@ -827,10 +817,10 @@ visualisation nouvelles données ^ZT98H8Ce
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 483.9565217391304,
-		"scrollY": 419.58292726619,
+		"scrollX": 613.1352657004833,
+		"scrollY": 473.39803143285656,
 		"zoom": {
-			"value": 1.1500000000000001
+			"value": 0.8999999999999999
 		},
 		"currentItemRoundness": "round",
 		"gridSize": null,
