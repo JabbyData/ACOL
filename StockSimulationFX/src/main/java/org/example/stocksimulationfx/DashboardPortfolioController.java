@@ -50,7 +50,7 @@ public class DashboardPortfolioController extends Controller {
     @FXML
     public void handleQuit(){
         Stage stage = (Stage) date.getScene().getWindow();
-        boolean answer = ConfirmQuitBox.display("Confirm Quit", "Are you sure you want to quit?");
+        boolean answer = ConfirmQuitBox.display("Confirm Quit", "Etes-vous sûr de vouloir quitter?");
         if (answer)
             stage.close();
     }
@@ -58,7 +58,7 @@ public class DashboardPortfolioController extends Controller {
     @FXML
     public void handleDeconnexion() throws IOException {
         Stage stage = (Stage) date.getScene().getWindow();
-        boolean answer = ConfirmQuitBox.display("Confirm Deconnexion", "Are you sure you want to deconnect?");
+        boolean answer = ConfirmQuitBox.display("Confirm Deconnexion", "Etes-vous sûr de vouloir vous déconnecter?");
         if (answer) {
             stage.close();
             LoginApplication loginApplication = new LoginApplication();

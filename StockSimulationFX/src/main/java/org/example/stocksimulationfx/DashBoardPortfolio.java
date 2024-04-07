@@ -19,7 +19,7 @@ public class DashBoardPortfolio extends DashBoard {
         stage.setScene(scene);
         stage.setOnCloseRequest(e -> {
             e.consume();
-            boolean answer = ConfirmQuitBox.display("Confirm Quit", "Are you sure you want to quit?");
+            boolean answer = ConfirmQuitBox.display("Confirm Quit", "Etês-vous sûr de vouloir quitter?");
             if (answer)
                 stage.close();
         });

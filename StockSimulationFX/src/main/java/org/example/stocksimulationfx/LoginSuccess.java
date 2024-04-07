@@ -16,7 +16,7 @@ public class LoginSuccess {
 
         Label label = new Label();
         label.setText(message);
-        Button closeButton = new Button("Access my dashboard");
+        Button closeButton = new Button("Accès au tableau de bord");
         closeButton.setOnAction(e -> {
             try {
                 goToDashboard(loginStage);

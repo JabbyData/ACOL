@@ -12,7 +12,7 @@ public class LoginApplication extends Application {
         stage.setScene(scene);
         stage.setOnCloseRequest(e -> {
             e.consume();
-            boolean answer = ConfirmQuitBox.display("Confirm Quit", "Are you sure you want to quit?");
+            boolean answer = ConfirmQuitBox.display("Confirm Quit", "Etes-vous sûr de vouloir quitter?");
             if (answer)
                 stage.close();
         });

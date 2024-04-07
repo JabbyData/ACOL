@@ -71,7 +71,7 @@ public class DashboardActionController extends Controller {
         g2d.drawLine(50, 350, 550, 350);
         g2d.drawLine(50, 50, 50, 350);
         g2d.drawString("Jour", 550, 365);
-        g2d.drawString("Prix", 10, 30);
+        g2d.drawString("Prix ($)", 10, 30);
         /* get min max of prices */
         float min = 10000f;
         float max = 0f;
@@ -159,7 +159,7 @@ public class DashboardActionController extends Controller {
             int selectedDate = Integer.parseInt(selecDate.getText());
             int n = market.getStocks().iterator().next().getPrices().size();
             if (selectedDate < 1 || selectedDate > date) {
-                AlertBox.display("Error", "Please enter a valid day (between 1 and " + String.valueOf(date) + ")");
+                AlertBox.display("Erreur", "Veuillez entrer un jour valide (entre 1 et " + date + ")");
             }
             else {
                 String stock = stocks.getValue();
@@ -175,14 +175,14 @@ public class DashboardActionController extends Controller {
             }
         }
         catch (NumberFormatException e){
-            AlertBox.display("Error", "Please enter a valid day (between 1 and 20)");
+            AlertBox.display("Erreur", "Veuillez entrer un nombre valide (entre 1 et " + market.getDate() + ")");
         }
     }
 
     @FXML
     public void handleQuit(){
         Stage stage = (Stage) date.getScene().getWindow();
-        boolean answer = ConfirmQuitBox.display("Confirm Quit", "Are you sure you want to quit?");
+        boolean answer = ConfirmQuitBox.display("Confirm Quit", "Etes-vous sûr de vouloir quitter?");
         if (answer)
             stage.close();
     }
@@ -190,7 +190,7 @@ public class DashboardActionController extends Controller {
     @FXML
     public void handleDeconnexion() throws IOException {
         Stage stage = (Stage) date.getScene().getWindow();
-        boolean answer = ConfirmQuitBox.display("Confirm Deconnexion", "Are you sure you want to deconnect?");
+        boolean answer = ConfirmQuitBox.display("Confirm Deconnexion", "Etes-vous sûr de vouloir vous déconnecter?");
         if (answer) {
             stage.close();
             LoginApplication loginApplication = new LoginApplication();

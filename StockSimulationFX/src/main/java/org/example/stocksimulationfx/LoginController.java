@@ -28,10 +28,10 @@ public class LoginController extends Controller{
             prevScene.getRoot().setOpacity(0.2);
             Stage loginStage = (Stage) usernameField.getScene().getWindow();
             LoginSuccess loginSuccess = new LoginSuccess();
-            loginSuccess.display("Login Successful", "Welcome, " + username + "!",loginStage);
+            loginSuccess.display("Connexion réussie", "Bienvenue, " + username + "!",loginStage);
 
         } else {
-            infoLabel.setText("Invalid username or password.");
+            infoLabel.setText("Mauvais identifants");
             infoLabel.setVisible(true);
             PauseTransition visiblePause = new PauseTransition(Duration.seconds(3));
             visiblePause.setOnFinished(e -> infoLabel.setVisible(false));
@@ -43,7 +43,7 @@ public class LoginController extends Controller{
     @Override
     void handleQuit(){
         Stage stage = (Stage) usernameField.getScene().getWindow();
-        boolean answer = ConfirmQuitBox.display("Confirm Quit", "Are you sure you want to quit?");
+        boolean answer = ConfirmQuitBox.display("Confirm Quit", "Etes-vous sûr de vouloir quitter?");
         if (answer)
             stage.close();
     }

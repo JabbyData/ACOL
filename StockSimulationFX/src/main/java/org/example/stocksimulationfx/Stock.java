@@ -2,7 +2,6 @@ package org.example.stocksimulationfx;
 
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
-import java.util.Objects;
 
 public class Stock {
     private String name;
@@ -22,14 +21,6 @@ public class Stock {
 
     public ArrayList<Float> getPrices() {
         return prices;
-    }
-
-    public void setPrices(ArrayList<Float> prices) {
-        this.prices = prices;
-    }
-
-    public void addPrice(float price) {
-        prices.add(price);
     }
 
     public float getCurrentPrice(int date) {

@@ -16,8 +16,8 @@ public class ConfirmQuitBox {
         label.setText(message);
 
         VBox layout = new VBox(10);
-        Button yesButton = new Button("Yes");
-        Button noButton = new Button("No");
+        Button yesButton = new Button("Oui");
+        Button noButton = new Button("Non");
 
         yesButton.setOnAction(e -> {
             answer = true;
