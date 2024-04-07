@@ -2,7 +2,6 @@ package org.example.stocksimulationfx;
 
 import java.util.HashSet;
 import java.util.ArrayList;
-import java.util.HashSet;
 
 public class GameStock {
     private HashSet<Stock> stocks;
