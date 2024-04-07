@@ -17,16 +17,27 @@
 1. L'utilisateur clique sur le bouton "déconnexion" (quelque soit le mode dans lequel il se trouve).
 2. Le système envoie un message de confirmation de déconnexion.
 3. L'utilisateur clique sur "ok".
-4. Le système déconnecte l'utilistauer et le renvoie à la page d'accueil à l'étape de connexion
+4. Le système déconnecte l'utilisateur et le renvoie à la page d'accueil à l'étape de connexion
 
 **Diagramme de séquence pour une déconnexion utilisateur**
 ![[ACOL Analyse Déconnexion.excalidraw]]
 
-#### 3) Changer de mode
+#### 3) Mode Portefeuille
+
+ - Affichage de l'évolution de la valeur du portefeuille
+1. L'utilisateur clique sur le bouton "Evolution"
+2. La courbe de l'évolution de la valeur du portefeuille s'affiche 
+
+![[ACOL Affichage Courbe Evolution Portefeuille.excalidraw]]
+
+- Visualisation de la date 
+1. L'utilisateur peut visualiser la date du jour actuel dans le jeu
+
+
+#### 4) Changer de mode
 Remarques sur le changement de mode : 
 1. Si l'utilisateur n'a pas validé ses transactions (i.e cliqué sur "BUY" ou "SELL" pour un champs donné), alors celles ci ne sont pas prises en compte pour l'**actualisation des données du client** (valeur et composition du portefeuille, date de la simulation ...) , qui **s'effectue à chaque passage au jour suivant**.
 
-2. Pour le mode visualisation courbe, aucune information liée à une action spécifique n'est affichée par défaut, l'utilisateur doit cliquer sur une action pour obtenir les informations souhaitées.
 ##### 1) Passage du mode Achat / Vente Actions (AVA) au mode Visualisation Portefeuille (VP)
 
 1. L'utilisateur clique sur le bouton VP
@@ -41,7 +52,7 @@ Remarques sur le changement de mode :
 **Diagramme de séquence pour un passage du mode VP au mode AVA**
 ![[ACOL Analyse VP to AVA.excalidraw]]
 
-#### 4) Quitter Application
+#### 5) Quitter Application
 1. L'utilisateur clique sur "quitter" ou tente de fermer l'application
 2. Le système envoit un message de demande de confirmation
 	2.1. L'utilisateur clique sur "yes"
@@ -54,27 +65,24 @@ Remarques sur le changement de mode :
 **Diagramme de séquence pour une fermeture annulée**
 ![[ACOL Analyse Fermeture Fail.excalidraw]]
 
-#### 5) Accéder à l'historique des transactions
-
-1) L'utilisateur est dans le mode Visualisation portefeuille
-2) Il clique sur le bouton "Historique Transaction"
-3) Le système affiche l'historique des transactions
-
-**Diagramme de séquence pour l'ouverture de la fenetre "Historique Transaction**
-![[ACOL Analyse Transaction.excalidraw]]
-
 #### 6) Passer au jour suivant 
 Le jeu s'arrête quand le jour M+1 est atteint (où M est le nombre de jour associés à la simulation).
 Ici, disons que l'utilisateur est au jour N $\leq$ M.
-1. L'utilisateur clique sur le bouton "passer"
+1. L'utilisateur clique sur le bouton "passer au jour suivant"
 2. 1. Si N = M : le jeu est fini, affichage d'une fenêtre "jeu terminé" ainsi que du bilan utilisateur.
-2. 2. Si le joueur est mode VP ("visualisation portefeuille") :  il reste toujours dans ce mode et les données sont actualisées au jour N+1 (valeur du portefeuille + mis à jour du graphique sur l'évolution de la valeur du portefeuille + mise à jour des valeur des titres détenus). 
-   Enfin le système affiche les nouvelles données.
+2. 2. Sinon, si le joueur est mode VP ("visualisation portefeuille") :  il reste toujours dans ce mode et les données sont actualisées au jour N+1 
+     2.2.1 mise à jour des valeur des titres disponible sur le marché (affichage des nouvelles valeurs des actions détenus dans le portefeuille)
+     2.2.2 calcul de la nouvelle valeur du portefeuille + mise à jours du graphique de l'évolution du portefeuille
 
 ![[Passer-un-jour-réussie]]
 
 
 #### 7) Bilan Fin du jeu
-1) L'utilisateur est au dernier jour de la simulation et apsse au jour suivant
-2) Le système termine la simulation et renvoit le bilan utilisateur associé
+1. L'utilisateur est au dernier jour de la simulation et passe au jour suivant
+2. Le système termine la simulation et renvoit le bilan utilisateur associé
+   2.1 Si (valeur du portefeuille initiale - valeur du portefeuille au dernier jour) >= 0 
+	   Affichage du message: "   "
+   2.2 Si  (valeur du portefeuille initiale - valeur du portefeuille au dernier jour) < 0 
+	   Affichage du message: "   "
+
 ![[Fin-de-jeu]]

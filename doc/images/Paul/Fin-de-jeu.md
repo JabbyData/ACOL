@@ -27,7 +27,7 @@ clique sur le bouton
 Requête message 
       de fin ^KAndHxdw
 
-Affichage du message de fin ^9cB83g4q
+Calcul du gain/perte  ^9cB83g4q
 
 visualisation message de fin ^Bekn94DQ
 
@@ -37,7 +37,7 @@ visualisation message de fin ^Bekn94DQ
 {
 	"type": "excalidraw",
 	"version": 2,
-	"source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.0.24",
+	"source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.0.25",
 	"elements": [
 		{
 			"type": "text",
@@ -684,8 +684,8 @@ visualisation message de fin ^Bekn94DQ
 		},
 		{
 			"type": "text",
-			"version": 126,
-			"versionNonce": 2049962158,
+			"version": 191,
+			"versionNonce": 1138920440,
 			"isDeleted": false,
 			"id": "9cB83g4q",
 			"fillStyle": "solid",
@@ -694,28 +694,28 @@ visualisation message de fin ^Bekn94DQ
 			"roughness": 1,
 			"opacity": 100,
 			"angle": 0,
-			"x": 45.5,
-			"y": 104.8939999269461,
+			"x": 91.1521739130435,
+			"y": 159.67660862259822,
 			"strokeColor": "#1e1e1e",
 			"backgroundColor": "transparent",
-			"width": 279.2796630859375,
+			"width": 209.59974670410156,
 			"height": 25,
 			"seed": 748770030,
 			"groupIds": [],
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1710711105355,
+			"updated": 1712239382579,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
 			"fontFamily": 1,
-			"text": "Affichage du message de fin",
-			"rawText": "Affichage du message de fin",
+			"text": "Calcul du gain/perte ",
+			"rawText": "Calcul du gain/perte ",
 			"textAlign": "left",
 			"verticalAlign": "top",
 			"containerId": null,
-			"originalText": "Affichage du message de fin",
+			"originalText": "Calcul du gain/perte ",
 			"lineHeight": 1.25,
 			"baseline": 18
 		},
@@ -799,43 +799,6 @@ visualisation message de fin ^Bekn94DQ
 			"originalText": "visualisation message de fin",
 			"lineHeight": 1.25,
 			"baseline": 18
-		},
-		{
-			"id": "mEjztwnJ",
-			"type": "text",
-			"x": 36,
-			"y": -267.7578125,
-			"width": 9.999984741210938,
-			"height": 25,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 2,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"seed": 1033569202,
-			"version": 2,
-			"versionNonce": 815172270,
-			"isDeleted": true,
-			"boundElements": null,
-			"updated": 1710711074713,
-			"link": null,
-			"locked": false,
-			"text": "",
-			"rawText": "",
-			"fontSize": 20,
-			"fontFamily": 1,
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"baseline": 18,
-			"containerId": null,
-			"originalText": "",
-			"lineHeight": 1.25
 		}
 	],
 	"appState": {
@@ -853,10 +816,10 @@ visualisation message de fin ^Bekn94DQ
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 750,
-		"scrollY": 487.2421875,
+		"scrollX": 480.9565217391304,
+		"scrollY": 400.6500920991024,
 		"zoom": {
-			"value": 1
+			"value": 1.1500000000000001
 		},
 		"currentItemRoundness": "round",
 		"gridSize": null,
