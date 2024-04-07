@@ -17,7 +17,7 @@
 1. L'utilisateur clique sur le bouton "déconnexion" (quelque soit le mode dans lequel il se trouve).
 2. Le système envoie un message de confirmation de déconnexion.
 3. L'utilisateur clique sur "ok".
-4. Le système déconnecte l'utilistauer et le renvoie à la page d'accueil à l'étape de connexion
+4. Le système déconnecte l'utilisateur et le renvoie à la page d'accueil à l'étape de connexion
 
 **Diagramme de séquence pour une déconnexion utilisateur**
 ![[ACOL Analyse Déconnexion.excalidraw]]
@@ -25,7 +25,7 @@
 #### 3) Mode Portefeuille
 
  - Affichage de l'évolution de la valeur du portefeuille
-1. L'utilisateur cloque sur le bouton "???"
+1. L'utilisateur clique sur le bouton "Evolution"
 2. La courbe de l'évolution de la valeur du portefeuille s'affiche 
 
 ![[ACOL Affichage Courbe Evolution Portefeuille.excalidraw]]
