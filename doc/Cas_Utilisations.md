@@ -22,7 +22,48 @@
 **Diagramme de séquence pour une déconnexion utilisateur**
 ![[ACOL Analyse Déconnexion.excalidraw]]
 
-#### 3) Mode Portefeuille
+#### 3) Mode Achat / Vente Action (AVA)
+
+##### 1) Achat d'action
+
+1. L'utilisateur entre un entier positif dans le champ quantité
+2. L'utilisateur sélectionne un titre
+3. L'utilisateur clique sur le bouton "Acheter"
+	1. La quantité renseignée est un entier inférieure à la quantité disponible
+		1. Le programme modifie le contenu du portefeuille et la quantité d'actions disponibles
+		2. La quantité disponible affichée est actualisée
+	2. La quantité renseignée n'est pas un entier
+		1. Le programme n'effectue aucune transaction
+	3.  La quantité renseignée est supérieure à la quantité disponible
+		1. Le programme n'effectue aucune transaction
+		2. Une fenêtre avec un message d'erreur est affichée
+			1. L'utilisateur clique sur le bouton "Ok"
+			2. L'utilisateur clique sur la croix en haut de la fenêtre
+		3. La fenêtre pop-up est fermée
+
+**Diagramme de séquence pour un achat réussi**
+![[achat-ok.excalidraw]]
+**Diagramme de séquence pour un échec d'achat (quantité disponible insuffisante)**
+![[quantity-not-available.excalidraw]]
+
+##### 2) Vente d'action
+
+1. L'utilisateur entre un entier positif dans le champ quantité
+2. L'utilisateur sélectionne un titre
+3. L'utilisateur clique sur le bouton "Vendre"
+	1. La quantité renseignée est un entier positif
+		1. Le programme modifie le contenu du portefeuille et la quantité d'actions disponibles
+		2. La quantité disponible affichée est actualisée
+	2. La quantité renseignée n'est pas un entier
+		1. Le programme n'effectue aucune transaction
+
+**Diagramme de séquence pour un achat réussi**
+![[vente-ok.excalidraw]]
+
+**Diagramme de séquence pour un échec d'achat ou de vente  (quantité rentrée invalide)**
+![[transaction-fail.excalidraw]]
+
+#### 4) Mode Portefeuille
 
  - Affichage de l'évolution de la valeur du portefeuille
 1. L'utilisateur clique sur le bouton "Evolution"
@@ -34,7 +75,7 @@
 1. L'utilisateur peut visualiser la date du jour actuel dans le jeu
 
 
-#### 4) Changer de mode
+#### 5) Changer de mode
 Remarques sur le changement de mode : 
 1. Si l'utilisateur n'a pas validé ses transactions (i.e cliqué sur "BUY" ou "SELL" pour un champs donné), alors celles ci ne sont pas prises en compte pour l'**actualisation des données du client** (valeur et composition du portefeuille, date de la simulation ...) , qui **s'effectue à chaque passage au jour suivant**.
 
@@ -52,7 +93,7 @@ Remarques sur le changement de mode :
 **Diagramme de séquence pour un passage du mode VP au mode AVA**
 ![[ACOL Analyse VP to AVA.excalidraw]]
 
-#### 5) Quitter Application
+#### 6) Quitter Application
 1. L'utilisateur clique sur "quitter" ou tente de fermer l'application
 2. Le système envoit un message de demande de confirmation
 	2.1. L'utilisateur clique sur "yes"
@@ -65,7 +106,7 @@ Remarques sur le changement de mode :
 **Diagramme de séquence pour une fermeture annulée**
 ![[ACOL Analyse Fermeture Fail.excalidraw]]
 
-#### 6) Passer au jour suivant 
+#### 7) Passer au jour suivant 
 Le jeu s'arrête quand le jour M+1 est atteint (où M est le nombre de jour associés à la simulation).
 Ici, disons que l'utilisateur est au jour N $\leq$ M.
 1. L'utilisateur clique sur le bouton "passer au jour suivant"
@@ -77,7 +118,7 @@ Ici, disons que l'utilisateur est au jour N $\leq$ M.
 ![[Passer-un-jour-réussie]]
 
 
-#### 7) Bilan Fin du jeu
+#### 8) Bilan Fin du jeu
 1. L'utilisateur est au dernier jour de la simulation et passe au jour suivant
 2. Le système termine la simulation et renvoit le bilan utilisateur associé
    2.1 Si (valeur du portefeuille initiale - valeur du portefeuille au dernier jour) >= 0 
