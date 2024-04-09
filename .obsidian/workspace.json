@@ -146,9 +146,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1b0d5878a8b92044",
+  "active": "8a4ce7ebe48729f1",
   "lastOpenFiles": [
+    "doc/cas_utilisations_image/Paul/Passer-un-jour-réussie.md",
+    "doc/cas_utilisations_image/Paul/Passage-mode.md",
+    "doc/cas_utilisations_image/Paul/Fin-de-jeu.md",
+    "doc/cas_utilisations_image/Paul/ACOL Analyse Transaction.excalidraw.md",
+    "doc/cas_utilisations_image/Paul/ACOL Affichage Courbe Evolution Portefeuille.excalidraw.md",
+    "doc/cas_utilisations_image/Paul",
+    "doc/cas_utilisations_image/Cas_Utilisations (copy).md",
+    "doc/Cas_Utilisations (copy).md",
+    "doc/cas_utilisations_image",
     "doc/Cahier_Charges.md",
-    "doc/Cas_Utilisations.md"
+    "doc/images/antonin/ACOL Analyse Fermeture Fail.excalidraw.md",
+    "doc/Cas_Utilisations.md",
+    "doc/images/Paul/ACOL Affichage Courbe Evolution Portefeuille.excalidraw.md",
+    "doc/images/Paul/ACOL Analyse Transaction.excalidraw.md",
+    "doc/Manuel Utilisateur.md",
+    "doc/images/vente-ok.excalidraw",
+    "doc/images/transaction-fail.excalidraw",
+    "doc/images/quantity-not-available.excalidraw",
+    "doc/images/achat-ok.excalidraw"
   ]
 }
