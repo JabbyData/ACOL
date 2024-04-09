@@ -1,0 +1,24 @@
+﻿					Informations nécessaires 
+
+						     ACOL
+IF 2A G1 
+Antonin POINT
+Paul CHILOU
+Titouan SADOUN
+Meng-Yang Hubert GUO
+
+
+
+1. Lancement de l’application
+
+Pour lancer l’application, il faut se placer dans le dossier StockSimulationFX et lancer la commande : mvn clean javafx:run
+Il faut un compte utilisateur (cf manuel utilisateur) pour pouvoir jouer au jeu de simulation. Voici le compte existant :
+	identifiant : a
+	mot de passe : p
+
+2. Contenu de chaque fichier
+
+Le dossier doc contient le document d'analyse, le document de conception, manuel utilisateur ainsi que le bilan du projet. Le sous-dossier images contient les images insérés dans les documents précédents.
+
+Le dossier StockSimulationFX contient tout le code de l'application.
+
