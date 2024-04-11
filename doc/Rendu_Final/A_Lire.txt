@@ -1,0 +1,35 @@
+﻿					Informations nécessaires 
+
+						     ACOL
+IF 2A G1 
+Antonin POINT
+Paul CHILOU
+Titouan SADOUN
+Meng-Yang Hubert GUO
+
+
+
+1. Lancement de l’application
+
+Le logiciel Maven (déjà installé sur les machines de l'ENSIMAG) est nécessaire à l'installation des dépendances. 
+Si le logiciel n'est pas installé sur la machine en question, la command suivante permet de l'installer : sudo apt install mvn.
+
+Pour lancer l’application, il faut se placer dans le dossier StockSimulationFX et lancer la commande : mvn clean javafx:run
+
+Il faut un compte utilisateur (cf manuel utilisateur) pour pouvoir jouer au jeu de simulation. Voici le compte existant :
+	identifiant : a
+	mot de passe : p
+
+2. Contenu de chaque fichier
+
+Le fichier Rendu_Acol.pdf contient le compte rendu de notre projet ACOL.
+
+Le dossier annexe contient les diagrammes logiciels évoqués dans la partie conception.
+
+Le dossier StockSimulationFX contient tout le code de la simulation, en particulier : 
+
+	Le fichier src/main/java/org/example/stocksimulationfx contient le code lié à l'implémentation du jeu et de l'interface graphique. 
+	
+	Le fichier src/ressources/ les ressources qui remplissent les champs de l'interface graphique et assure la partie dynamique du jeu (images et fichier fxml). 
+	
+	Le fichier pom.xml permet le bon déroulement de Maven pour le lancement de la simulation.
